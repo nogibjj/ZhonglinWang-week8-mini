@@ -1,4 +1,5 @@
-# Zhonglin Wang - Rust mini project-week7
+# Zhonglin Wang - Rust mini project-week8
+
 This project is generating a random fruit
 
 ## Install Rust on Terminal
