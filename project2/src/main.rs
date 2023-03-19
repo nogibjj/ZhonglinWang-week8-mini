@@ -1,21 +1,28 @@
-use rand::seq::SliceRandom;
-// use rand::Rng;
-
-const FRUITS: &[&str] = &[
-    "Apple",
-    "Banana",
-    "Orange",
-    "Pineapple",
-    "Strawberry",
-    "Mango",
-    "Grapes",
-    "Kiwi",
-    "Watermelon",
-    "Peach",
-];
+use std::io;
 
 fn main() {
-    let mut rng = rand::thread_rng();
-    let fruit = FRUITS.choose(&mut rng).unwrap();
-    println!("{}", fruit);
+    let x = get_input("Enter x: ");
+    let y = get_input("Enter y: ");
+    let z = get_input("Enter z: ");
+
+    let coordinates = (x, y, z);
+
+    println!("Coordinates: {:?}", coordinates);
+}
+
+fn get_input(prompt: &str) -> f64 {
+    loop {
+        println!("{}", prompt);
+
+        let mut input = String::new();
+
+        io::stdin()
+            .read_line(&mut input)
+            .expect("Failed to read input");
+
+        match input.trim().parse() {
+            Ok(num) => return num,
+            Err(_) => println!("Invalid input, please enter a number"),
+        }
+    }
 }
