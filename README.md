@@ -1,6 +1,6 @@
 # Zhonglin Wang - Rust mini project-week8
 
-This project is generating a random fruit
+This project accepts three inputs and combine them to output a coordinator.
 
 ## Install Rust on Terminal
 1. Type: `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
